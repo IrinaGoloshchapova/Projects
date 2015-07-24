@@ -1,0 +1,32 @@
+---
+title       : 
+subtitle    : 
+author      : 
+job         : 
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+---
+
+## Мой первый слайд
+
+Давайте попробуем впихнуть сюда крутецко-гугл-график!
+```{r, echo = FALSE, fig.show = TRUE}
+library(googleVis)
+M7 <- gvisMotionChart(Fruits, idvar="Fruit", timevar="Year",
+                      xvar="Profit", yvar="Expenses",
+                      colorvar="Location", sizevar="Sales")
+plot(M7)
+```
+
+---
+
+## My second slide
+
+```{r, echo = FALSE, fig.show = TRUE}
+plot(mtcars$mpg, mtcars$wt)
+```
+
