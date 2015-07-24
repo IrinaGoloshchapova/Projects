@@ -1,0 +1,37 @@
+---
+title       : CMASF Graphics Example
+subtitle    : 
+author      : Irina Goloshchapova
+job         : Expert
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+---
+
+## Crisis Pulse
+- 3 - high probability
+- 2 - medium probability
+- 1 - low probability
+
+```{r ggauge, echo = FALSE, results='asis', warning = FALSE, message = FALSE}
+ind <- data.frame(Indicator = c("Crisis", "NPL", "Liquidity", "Exch.rate"),
+                  Probability = c(3, 3, 1, 2))
+ind$Indicator <- factor(as.character(ind$Indicator))
+Gauge <-  gvisGauge(ind, options=list(min=0, max=3, greenFrom=0, 
+                                      greenTo=1.5, yellowFrom=1.5, yellowTo=2.5,
+                                      redFrom=2.5, redTo=3, 
+                                      width = 400, height = 600))
+plot(Gauge, tag = "chart")
+```
+
+---
+## System Bank crisis probability
+
+<iframe src="https://plot.ly/~IrinaGoloshchapova/40/none/" width="800" height="500" scrolling="no" frameBorder="0"></iframe>
+
+<span class="footnote">Data source: CMASF</span>
+
+---
