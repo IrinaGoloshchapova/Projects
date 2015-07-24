@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CMASF Graphics Example</title>
+  <meta charset="utf-8">
+  <meta name="description" content="CMASF Graphics Example">
+  <meta name="author" content="Irina Goloshchapova">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>CMASF Graphics Example</h1>
+    <h2></h2>
+    <p>Irina Goloshchapova<br/>Expert</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Crisis Pulse</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>3 - high probability</li>
+<li>2 - medium probability</li>
+<li>1 - low probability</li>
+</ul>
+
+<!-- Gauge generated in R 3.2.1 by googleVis 0.5.9 package -->
+
+<!-- Fri Jul 24 22:31:48 2015 -->
+
+<!-- jsHeader -->
+
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataGaugeID1c6c9063a3c () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ "Crisis",
+3 
+],
+[
+ "NPL",
+3 
+],
+[
+ "Liquidity",
+1 
+],
+[
+ "Exch.rate",
+2 
+] 
+];
+data.addColumn('string','Indicator');
+data.addColumn('number','Probability');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartGaugeID1c6c9063a3c() {
+var data = gvisDataGaugeID1c6c9063a3c();
+var options = {};
+options["allowHtml"] = true;
+options["min"] =      0;
+options["max"] =      3;
+options["greenFrom"] =      0;
+options["greenTo"] =    1.5;
+options["yellowFrom"] =    1.5;
+options["yellowTo"] =    2.5;
+options["redFrom"] =    2.5;
+options["redTo"] =      3;
+options["width"] =    400;
+options["height"] =    600;
+
+    var chart = new google.visualization.Gauge(
+    document.getElementById('GaugeID1c6c9063a3c')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "gauge";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartGaugeID1c6c9063a3c);
+})();
+function displayChartGaugeID1c6c9063a3c() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+</script>
+ 
+
+<!-- jsChart -->  
+
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartGaugeID1c6c9063a3c"></script>
+ 
+
+<!-- divChart -->
+
+<div id="GaugeID1c6c9063a3c" 
+  style="width: 400; height: 600;">
+</div>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>System Bank crisis probability</h2>
+  </hgroup>
+  <article data-timings="">
+    <iframe src="https://plot.ly/~IrinaGoloshchapova/40/none/" width="800" height="500" scrolling="no" frameBorder="0"></iframe>
+
+<p><span class="footnote">Data source: CMASF</span></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>System bank crisis probability</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Playing with Google Graphics</p>
+
+<!-- AnnotationChart generated in R 3.2.1 by googleVis 0.5.9 package -->
+
+<!-- Fri Jul 24 22:31:48 2015 -->
+
+<!-- jsHeader -->
+
+<script type="text/javascript">
+ 
+// jsData 
+function gvisDataAnnotationChartID1c6c446251a9 () {
+var data = new google.visualization.DataTable();
+var datajson =
+[
+ [
+ new Date(2014,0,1),
+0.133,
+0.11 
+],
+[
+ new Date(2014,1,1),
+0.136,
+0.116 
+],
+[
+ new Date(2014,2,1),
+0.13,
+0.116 
+],
+[
+ new Date(2014,3,1),
+0.123,
+0.122 
+],
+[
+ new Date(2014,4,1),
+0.121,
+0.132 
+],
+[
+ new Date(2014,5,1),
+0.113,
+0.125 
+],
+[
+ new Date(2014,6,1),
+0.112,
+0.12 
+],
+[
+ new Date(2014,7,1),
+0.112,
+0.123 
+],
+[
+ new Date(2014,8,1),
+0.107,
+0.108 
+],
+[
+ new Date(2014,9,1),
+0.109,
+0.11 
+],
+[
+ new Date(2014,10,1),
+0.11,
+0.103 
+],
+[
+ new Date(2014,11,1),
+0.105,
+0.099 
+],
+[
+ new Date(2015,0,1),
+0.11,
+0.104 
+],
+[
+ new Date(2015,1,1),
+0.099,
+0.118 
+],
+[
+ new Date(2015,2,1),
+0.087,
+0.131 
+],
+[
+ new Date(2015,3,1),
+0.083,
+0.145 
+],
+[
+ new Date(2015,4,1),
+0.088,
+0.162 
+] 
+];
+data.addColumn('date','date');
+data.addColumn('number','bank.crisis.indicator');
+data.addColumn('number','bank.crisis.ending.indicator');
+data.addRows(datajson);
+return(data);
+}
+ 
+// jsDrawChart
+function drawChartAnnotationChartID1c6c446251a9() {
+var data = gvisDataAnnotationChartID1c6c446251a9();
+var options = {};
+options["width"] =    600;
+options["height"] =    350;
+options["fill"] =     10;
+options["displayExactValues"] = true;
+options["colors"] = ['#0000ff','#00ff00'];
+
+    var chart = new google.visualization.AnnotationChart(
+    document.getElementById('AnnotationChartID1c6c446251a9')
+    );
+    chart.draw(data,options);
+    
+
+}
+  
+ 
+// jsDisplayChart
+(function() {
+var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+var chartid = "annotationchart";
+  
+// Manually see if chartid is in pkgs (not all browsers support Array.indexOf)
+var i, newPackage = true;
+for (i = 0; newPackage && i < pkgs.length; i++) {
+if (pkgs[i] === chartid)
+newPackage = false;
+}
+if (newPackage)
+  pkgs.push(chartid);
+  
+// Add the drawChart function to the global list of callbacks
+callbacks.push(drawChartAnnotationChartID1c6c446251a9);
+})();
+function displayChartAnnotationChartID1c6c446251a9() {
+  var pkgs = window.__gvisPackages = window.__gvisPackages || [];
+  var callbacks = window.__gvisCallbacks = window.__gvisCallbacks || [];
+  window.clearTimeout(window.__gvisLoad);
+  // The timeout is set to 100 because otherwise the container div we are
+  // targeting might not be part of the document yet
+  window.__gvisLoad = setTimeout(function() {
+  var pkgCount = pkgs.length;
+  google.load("visualization", "1", { packages:pkgs, callback: function() {
+  if (pkgCount != pkgs.length) {
+  // Race condition where another setTimeout call snuck in after us; if
+  // that call added a package, we must not shift its callback
+  return;
+}
+while (callbacks.length > 0)
+callbacks.shift()();
+} });
+}, 100);
+}
+ 
+// jsFooter
+</script>
+ 
+
+<!-- jsChart -->  
+
+<script type="text/javascript" src="https://www.google.com/jsapi?callback=displayChartAnnotationChartID1c6c446251a9"></script>
+ 
+
+<!-- divChart -->
+
+<div id="AnnotationChartID1c6c446251a9" 
+  style="width: 600; height: 350;">
+</div>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Crisis Pulse'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='System Bank crisis probability'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='System bank crisis probability'>
+         3
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
