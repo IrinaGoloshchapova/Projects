@@ -1,0 +1,30 @@
+---
+title       : My first interactive presentation
+subtitle    : Whow-whow-whow!
+author      : Irina Gooshchapova
+job         : Supermom
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+---
+
+## My first slide
+
+Let's play with google graphics here!
+```{r motionchartcode, results='asis'}
+library(googleVis)
+plot(gvisMotionChart(Fruits, "Fruit", "Year",
+options=list(width=600, height=400)), tag="chart")
+```
+
+---
+
+## My second slide
+
+```{r, echo = FALSE, fig.show = TRUE}
+plot(mtcars$mpg, mtcars$wt)
+```
+
